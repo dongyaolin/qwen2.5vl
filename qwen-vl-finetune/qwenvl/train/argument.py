@@ -5,7 +5,7 @@ from typing import Dict, Optional, Sequence, List
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="Qwen/Qwen2.5-VL-3B-Instruct")
+    model_name_or_path: Optional[str] = field(default="/root/workspace/Qwen2.5-VL/Qwen2.5-VL-3B-Instruct")
     tune_mm_llm: bool = field(default=False)
     tune_mm_mlp: bool = field(default=False)
     tune_mm_vision: bool = field(default=False)

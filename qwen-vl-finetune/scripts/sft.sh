@@ -9,7 +9,7 @@ NNODES=${WORLD_SIZE:-1}
 deepspeed=./scripts/zero3.json
 
 # Model configuration
-llm=Qwen/Qwen2.5-VL-3B-Instruct  # Using HuggingFace model ID
+llm=/root/workspace/Qwen2.5-VL/Qwen2.5-VL-3B-Instruct  # Using HuggingFace model ID
 
 # Training hyperparameters
 lr=2e-7
@@ -20,7 +20,7 @@ grad_accum_steps=4
 entry_file=qwenvl/train/train_qwen.py
 
 # Dataset configuration (replace with public dataset names)
-datasets=public_dataset1,public_dataset2
+datasets=cambrian_737k
 
 # Output configuration
 run_name="qwen2vl-baseline"

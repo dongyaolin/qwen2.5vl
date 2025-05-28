@@ -13,7 +13,7 @@ import torch
 from qwen_vl_utils import process_vision_info
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration, TextIteratorStreamer
 
-DEFAULT_CKPT_PATH = 'Qwen/Qwen2.5-VL-7B-Instruct'
+DEFAULT_CKPT_PATH = 'Qwen2.5-VL-7B-Instruct'
 
 
 def _get_args():
@@ -39,7 +39,7 @@ def _get_args():
                         default=False,
                         help='Automatically launch the interface in a new tab on the default browser.')
     parser.add_argument('--server-port', type=int, default=7860, help='Demo server port.')
-    parser.add_argument('--server-name', type=str, default='127.0.0.1', help='Demo server name.')
+    parser.add_argument('--server-name', type=str, default='0.0.0.0', help='Demo server name.')
 
     args = parser.parse_args()
     return args
